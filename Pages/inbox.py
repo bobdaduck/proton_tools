@@ -6,7 +6,7 @@ from browser import Driver
 class Inbox:
 
     def __init__(self, driver):
-        self.driver = Driver().get_instance()
+        self.driver = driver
 
     def goto(self):
         self.driver.get("https://mail.proton.me/")
