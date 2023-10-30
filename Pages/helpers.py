@@ -32,6 +32,9 @@ def try_clicking_for_duration(element, duration):
             time.sleep(1)
 
 def wait_for_element(driver, locator_definition): 
+    #WebDriverWait(driver, 20).until(
+     #           EC.visibility_of_element_located(locator_definition)
+      #      )
     WebDriverWait(driver, 20).until(
-                EC.visibility_of_element_located(locator_definition)
+                EC.element_to_be_clickable(locator_definition)
             )
